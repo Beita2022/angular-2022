@@ -1,0 +1,113 @@
+/*codigo css*/
+/*definir clases*/
+.texto25 {
+    font-size: 25px;
+    display: inline;
+    color: blueviolet;
+    font-weight: bold;
+    font-style: italic;
+}
+#texto25Id {
+    font-size: 45px;
+}
+p {
+    font-size: 80px;
+}
+#imagen {
+    width: 100px;
+    border-radius: 10px 20px 15px 30px;
+}
+
+/*<img> es un selector*/
+img {
+    width: 100px;
+    border-radius: 10px 20px 15px 30px; 
+}
+
+.caja1 {
+    border: 5px solid red;
+    font-size: 25px;
+    margin: 10px;
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;/*defecto*/
+}
+
+/* prevalece sobre el div:img" */
+.caja2 img { 
+    width: 50px;
+}
+
+div img {
+    width: 70px;
+}
+
+div img#imgDiv {
+    width: 80px;
+}
+
+section > p {
+    color:blue
+}
+
+h1 +p {
+    color:green
+}
+/*
+article h1  p {
+    color:green
+}
+*/
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color:brown;
+}
+
+a:link {
+    color:yellow;
+    font-size: 20px;
+}
+
+.links {
+    list-style-type: circle;
+}
+
+.container {
+    display: flex;
+    /*justify-content: center;
+    justify-items: center;*/
+    flex-direction: row;
+    flex-wrap: wrap; /* cuando se minimiza y no caben los pasa abajo */
+    border : 1px solid black;
+}
+
+/* este no funciona
+@media  only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+}
+}
+*/
+
+.search {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menulink {
+    display: flex;
+
+}
+.menulinkLI {
+    color:red;
+    font-size: 20px;
+    text-decoration: none;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+
+    <!--forma 2: externo-->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!--forma3: inline-->
+    <p style="font-size: 25px;">
+        Soy un texto
+    </p>
+    <p class="texto25" id="texto25Id">
+        Soy otro parrafo
+    </p>
+    <br>
+    <!--atributo de una etiqueta-->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTivkZt-cn9mZNTKG9QymsxkkKlw32SNdtVEPMsABKSh-A5YNE1xsZKdwHpdx7V62xg7mU&usqp=CAU"
+        alt="Familia Simpson">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTivkZt-cn9mZNTKG9QymsxkkKlw32SNdtVEPMsABKSh-A5YNE1xsZKdwHpdx7V62xg7mU&usqp=CAU"
+        alt="Familia Simpson">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTivkZt-cn9mZNTKG9QymsxkkKlw32SNdtVEPMsABKSh-A5YNE1xsZKdwHpdx7V62xg7mU&usqp=CAU"
+        alt="Familia Simpson">
+    
+    <!--
+        modelo de caja
+        margin,
+        padding
+        border
+    -->
+    <div class="caja1">
+        Soy una caja
+    </div>
+    <div class="caja2">
+        <p>Soy otra caja</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTivkZt-cn9mZNTKG9QymsxkkKlw32SNdtVEPMsABKSh-A5YNE1xsZKdwHpdx7V62xg7mU&usqp=CAU"
+        alt="Familia Simpson"
+        id ="imgDiv">
+    </div>
+
+    <section>
+        <p>
+            Esto es strong
+        </p>
+        <p>
+            Esto es realemnte strong
+        </p>
+    </section>
+
+    <section>
+        <h1>
+            titulo 1
+        </h1>
+        <p>
+            Parrafo 1
+        </p>
+        <p>
+            PArrafo 2
+        </p>
+    </section>
+    <section>
+        <a href="https://www.google.com">Google</a>
+        <a href="https://www.tematika.com">Tematika</a>
+    </section>
+
+    <section>
+        <div class="container">
+            <ul class="links" >
+                <li>
+                    <a>link1</a>
+                </li>
+                <li>
+                    <a>link2</a>
+                </li>
+                <li>
+                    <a>link3</a>
+                </li>
+            </ul>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTivkZt-cn9mZNTKG9QymsxkkKlw32SNdtVEPMsABKSh-A5YNE1xsZKdwHpdx7V62xg7mU&usqp=CAU"
+                alt="Familia Simpson"
+                id ="imgDiv">
+            </div>
+        </div>
+    </section>
+
+    <section class="search">
+        <nav>
+            <ul class="menulink">
+                <li class="menulinkLI">
+                    link1
+                </li>
+                <li>
+                    link2
+                </li>
+                <li>
+                    link3
+                </li>
+            </ul>
+        </nav>
+        <form>
+            <input type="text"> 
+            <button>Search</button>
+        </form>
+    </section>
+</body>
