@@ -96,6 +96,7 @@ a:link {
 */
 
 .search {
+    background-color: rgb(62, 62, 112);
     margin: 0px;
     padding: 0px;
     display: flex;
