@@ -1,17 +1,22 @@
-//const btnSearch = document.getElementById('btnSearch');
+const btnSearch = document.getElementById('btnSearch');
 
-//btnSearch.addEventListener('click',()=>{
+//asigno el evento?
+btnSearch.addEventListener('click',()=>{
+    
+});
 
-//});
+onClickSearch2 = function() {
+    console.log('onClickSearch2');
+}
 
-//function onClickSearch () {
- //   console.log ('onClieckSearch');
-//}
+function onClickSearch() {
+    //capturar el div por su id
+    const div = document.getElementById('info');
 
-//onClickSearch2 = function () {
- //   console.log ('onClieckSearch2');
-//}
+    //alt +96
+    div.innerHTML  = `<p>Soy un parrafo</p>`;
 
-//btnSearch.addEventListener('click', onClickSearch2 )
+    console.log(p);
+}
 
-// regres.in - bootstrap
+btnSearch.addEventListener('click', onClickSearch);

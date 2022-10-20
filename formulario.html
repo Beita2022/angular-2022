@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <head>
 
-
+    <head> 
+        <nav>
+            <a href="./index.html">Volver</a>
+        </nav>
     </head>
+
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Formularios</h1>
+
+            <!--formularios-->
+            <form action="http://127.0.0.1:5555/formulario.html"
+                 method="GET" 
+                 enctype="multipart/form-data">
+                <label for="txtNombre">Nombre</labekl>
+                    <input type="text" 
+                        maxlength="10"
+                        size="10"
+                        name="nombre"                         
+                        placeholder="contenido" 
+                        value="" 
+                        id="txtNombre">
+                    <label for="email">Email</label>
+                    <input type="email" 
+                        name="email" 
+                        id="email">
+                    <!--opciones unicas/multiple-->
+                    <br>
+                    <label>Manaña</label>
+                    <input type="checkbox" 
+                        name="tm" 
+                        value="0">
+                    <label>Tarde</label>
+                    <input type="checkbox" 
+                        name="tt"
+                        value="1">
+                    <br>
+                    <label>Seleccione solo uno</label>
+                    <input type="radio" 
+                        name="r"
+                        value="r1">
+                    <input type="radio" 
+                        name="r" 
+                        value="r2">
+                    <br>
+
+                    <!--fecha-->
+                    <input type="datetime-local"
+                        name="fecha">                    
+                    <br>
+
+                    <label>Texto Libre</label>
+                    <textarea rows="10" cols="80">
+                        Acá va el valor que quiero dentro del area
+                    </textarea>
+                    <br>
+                    <label>Número</label>
+                    <input type="number" 
+                        name="edad"
+                        min="0"
+                        max="5">
+                    <br>
+                    <label for="file">Seleccione un archivo</label>
+                    <input type="file" id="file" name="file">
+                    <br>
+                    <label>Buscar</label>
+                    <input type="search"> 
+                    <br>
+                    <label>URL:</label>
+                    <input type="url" name="url">
+                    <br>
+
+                    <select name="opcion">
+                        <option value="op1">Opcion 1</option>
+                        <option value="op2">Opcion 2</option>
+                    </select>
+                    <br>    
+                    <!--boton par enviar la informacion-->
+                    <input type="submit" value="Enviar">
+            </form>
+        </main>
+    </body>
 </body>
 
-    <header>
-
-    </header>
-    
-    <main>
-        <h1>FORMULARIO</h1>
-
-          <!-- formularios-->
-    <form action="http://127.0.0.1:5555/formulario.html"
-    method="POST" enctype="multipart/form-data"> <!-- para mandar binarios-->
-    <label for="txtNombre">Nombre</label>
-    <input type="text" name="nombre" 
-            placeholder="contenido"  maxlength="10" size="12" value="contenido" disabled
-            id="txtNombre">
-    <label for="email">email</label>
-    <input type="email" name="mail" 
-            id="email">
-
-    <!-- opciones unicas/multiples-->
-    <br>
-    <label>Opciones</label>
-    <label>Mañana</label>
-    <input type="checkbox" name ="tm" value="0">
-    <label>Tarde</label>
-    <input type="checkbox" name ="tm" value="1">
-
-    <br>
-    <label>Seleccione solo uno</select>
-        <input type="radio" name ="r" value="r1">
-        <input type="radio" name ="r" value="r2">
-
-    <!-- fechas -->
-    <input type="date" name="fecha">
-
-    <input type="datetime-local" name="fecha">
-    <br>
-    <label>TEXTO LIBRE</label>
-    <br>
-    <textarea rows="10" cols="80">valor dentro del area</textarea>
-    <br>
-    <label>NUMEROS</label>
-    <input type="number" name="edad"
-    min="0" max="5">
-
-    <label for ="file">Seleccione un archivo</label>
-    <input type="file" id="file" name="file">
-    <br>
-
-    <label>Buscar</label>
-    <input type="search"> <!-- aparece X de borrar --> 
-    <br>
-    <label>URL:</label>
-    <input type="url" name="url"> 
-    <br>
-
-
-    <select name="Opcion">
-        <option value="op1">opcion1</option>
-        <option value="op2">opcion2</option>
-        <option value="op3">opcion3</option>
-    </select>
-    <br>
-
-    <input type="submit" value ="Enviar">
-    </form>
-
-
-    <a href="./index.html">Volver</a>
-
-    </main>
-</body>
 </html>

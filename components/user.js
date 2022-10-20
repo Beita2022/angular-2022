@@ -1,64 +1,30 @@
 //objeto de js
 //new 
-const users = {
-    "page": 2,
-    "per_page": 6,
-    "total": 12,
-    "total_pages": 2,
-    "data": [
-        {
-            "id": 7,
-            "email": "michael.lawson@reqres.in",
-            "first_name": "Michael",
-            "last_name": "Lawson",
-            "avatar": "https://reqres.in/img/faces/7-image.jpg"
-        },
-        {
-            "id": 8,
-            "email": "lindsay.ferguson@reqres.in",
-            "first_name": "Lindsay",
-            "last_name": "Ferguson",
-            "avatar": "https://reqres.in/img/faces/8-image.jpg"
-        },
-        {
-            "id": 9,
-            "email": "tobias.funke@reqres.in",
-            "first_name": "Tobias",
-            "last_name": "Funke",
-            "avatar": "https://reqres.in/img/faces/9-image.jpg"
-        },
-        {
-            "id": 10,
-            "email": "byron.fields@reqres.in",
-            "first_name": "Byron",
-            "last_name": "Fields",
-            "avatar": "https://reqres.in/img/faces/10-image.jpg"
-        },
-        {
-            "id": 11,
-            "email": "george.edwards@reqres.in",
-            "first_name": "George",
-            "last_name": "Edwards",
-            "avatar": "https://reqres.in/img/faces/11-image.jpg"
-        },
-        {
-            "id": 12,
-            "email": "rachel.howell@reqres.in",
-            "first_name": "Rachel",
-            "last_name": "Howell",
-            "avatar": "https://reqres.in/img/faces/12-image.jpg"
-        }
-    ],
-    "support": {
-        "url": "https://reqres.in/#support-heading",
-        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-    }
-};
-
+/*
+function searchUser(page) {
+    //fetch(api) o axios(librria) o rxjs(angualr)
+    const endPoint = `https://reqres.in/api/users${page ? `?page=${page}` : ''}` ;
+    
+    //peticiones async
+    fetch(endPoint)
+        .then(response => response.json())
+        .then(data => Users(data));
+}
+*/
 /*
     "componente"
 */
-function Users() {
+function Users(users) {
+
+    if(!users) {
+        return `
+            <div class="row col-12">
+                <h1>No hay datos</h1>
+                <button class="btn btn-success" onclick="searchUser(1)">Obtener todos</button>
+            </div>
+        `;
+    }
+
     const userHtml = `
     <table class="table">
         <thead>
@@ -101,13 +67,13 @@ function Paginator(currentPage, totalPage) {
     <nav aria-label="...">
         <ul class="pagination justify-content-center">
             <li class="page-item ${currentPage > 1 ? '' : 'disabled' }">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <a class="page-link" href="javascript:()=>{}" tabindex="-1" aria-disabled="true" ${currentPage > 1 ? `onclick="searchUser(${currentPage-1})"` : '' }>
                     Previous
                 </a>
             </li>
             ${Pagina(currentPage,totalPage)}
             <li class="page-item ${currentPage === totalPage ? 'disabled' : '' }"">
-                <a class="page-link" href="#" ${currentPage !== totalPage ? `onclick="next(${currentPage+1})"` : '' }">
+                <a class="page-link" href="javascript:()=>{}" ${currentPage !== totalPage ? `onclick="searchUser(${currentPage+1})"` : '' }>
                     Next
                 </a>
             </li>
@@ -124,7 +90,7 @@ function Pagina(currentPage,totalPage) {
     for(let i=1;i<=totalPage;i++) {
         paginas+=`
             <li class="page-item ${i === currentPage ? 'active' : ''}" aria-current="page">
-                <a class="page-link" href="javascript:()=>{}" ${i !== currentPage ? `onclick="alert(${i})"` : ''}">${i}</a>
+                <a class="page-link" href="javascript:()=>{}" ${i !== currentPage ? `onclick="searchUser(${i})"` : ''}>${i}</a>
             </li>
         `
     }

@@ -7,12 +7,14 @@
     font-weight: bold;
     font-style: italic;
 }
-#texto25Id {
+#text25Id {
     font-size: 45px;
 }
+
 p {
-    font-size: 80px;
+    font-size: 25px !important;
 }
+
 #imagen {
     width: 100px;
     border-radius: 10px 20px 15px 30px;
@@ -34,81 +36,145 @@ img {
     box-sizing: border-box;/*defecto*/
 }
 
-/* prevalece sobre el div:img" */
-.caja2 img { 
+.caja2 img {
     width: 50px;
 }
 
 div img {
-    width: 70px;
+    width: 60px;
 }
 
 div img#imgDiv {
-    width: 80px;
+    width: 150px;
 }
 
 section > p {
     color:blue
 }
 
-h1 +p {
-    color:green
+h1 + p {
+    color:green;
 }
-/*
-article h1  p {
-    color:green
+
+article h1 ~ p {
+    color:green;
 }
-*/
+
+section table > tbody {
+    background-color: aquamarine;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: brown;   
+    font-size: 30px;
+}
 
 a:visited {
-    color: black;
+    color: yellow;
 }
 
 a:hover {
-    color:brown;
+    color: rgba(168, 90, 45, 0.354);
 }
 
-a:link {
-    color:yellow;
-    font-size: 20px;
+a:active {
+    color: black;
+}
+
+/*nth?*/
+#tbl2 tbody tr:last-child {
+    font-size: 35px;
+}
+
+#tbl2 tbody tr:first-child {
+    font-size: 15px;
+}
+
+#tbl2 tbody tr:nth-child(odd) {
+    font-size: 25px;
+    color: white;
+    background-color: blue;
+}
+
+#tbl2 tbody tr:nth-child(even) {
+    font-size: 25px;
+    color: white;
+    background-color: rgb(0, 238, 255);
+}
+
+#tbl3 tbody tr:nth-child(3n + 2) {
+    background-color: rgb(255, 136, 0);
 }
 
 .links {
-    list-style-type: circle;
+    list-style-type: lower-roman ;
 }
 
 .container {
     display: flex;
-    /*justify-content: center;
-    justify-items: center;*/
     flex-direction: row;
-    flex-wrap: wrap; /* cuando se minimiza y no caben los pasa abajo */
-    border : 1px solid black;
+    flex-wrap: wrap;
+    height: 500px;
+    border: 1px solid black;
+    align-items: flex-start;
 }
-
-/* este no funciona
-@media  only screen and (max-width: 600px) {
+.container img {
+    padding: 5px;
+    width: 150px;
+}
+/*
+@media only screen and (max-width: 500px) {
     .container {
         display: flex;
         flex-direction: column;
-}
+    }
 }
 */
-
-.search {
-    background-color: rgb(62, 62, 112);
+* {
     margin: 0px;
     padding: 0px;
+}
+
+.search {
+    background-color: rgb(195, 215, 215);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.search form > button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    width: 150px;
+    height: 30px;
 }
 
-.menulink {
+.search form > input#seach_text{
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid beige;
+}
+.search__menuLink {
     display: flex;
-
 }
-.menulinkLI {
+
+.search__menuLink li {
     color:red;
     font-size: 20px;
-    text-decoration: none;
+    list-style-type: none;
+}
+
+
+.search__menuLink li  a{
+    font-size: 25px;
+    color: black;
+    text-transform: capitalize;
+}
+
+.search__menuLink li a:hover{
+    font-size: 27px;
+    color: rgb(0, 0, 0);
 }

@@ -6,6 +6,7 @@ function searchUser(page) {
     fetch(endPoint)
         .then(response => response.json())
         .then(data => {
+            persistData(data);
             render('users', Users(data))
         });
 }
